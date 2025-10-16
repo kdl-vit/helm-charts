@@ -1,52 +1,38 @@
-# Charts
+# Helm Charts
 
-[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/gabe565)](https://artifacthub.io/packages/search?repo=gabe565&sort=relevance)
-[![Release Charts](https://github.com/gabe565/charts/actions/workflows/release.yaml/badge.svg)](https://github.com/gabe565/charts/actions/workflows/release.yaml)
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/voit)](https://artifacthub.io/packages/search?repo=voit&sort=relevance)
+[![Release Charts](https://github.com/voit/helm-charts/actions/workflows/release.yaml/badge.svg)](https://github.com/voit/helm-charts/actions/workflows/release.yaml)
 [![Renovate](https://img.shields.io/badge/Renovate-enabled-brightgreen?logo=renovatebot&logoColor=1DDEDD)](https://renovatebot.com)
 [![Pre-Commit](https://img.shields.io/badge/Pre--Commit-enabled-brightgreen?logo=pre-commit)](https://pre-commit.com)
 
-A collection of Helm charts, based on the
-[bjw-s common library chart](https://github.com/bjw-s/helm-charts/tree/a081de5/charts/library/common).
+A collection of **Helm charts** maintained by [Voit](https://github.com/voit), designed for production-ready deployments of open-source platforms and tools.  
+Each chart follows best practices and can be easily integrated into Kubernetes or Rancher clusters.
 
-## Chart Overview
+---
+
+## 🗂️ Chart Overview
 
 | Chart | Description |
 | ----- | ----------- |
-| [AdGuard Home <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/adguard-home/icon.svg' alt='adguard-home icon' width='18px' align='right' loading='lazy'>](charts/adguard-home/) | Free and open source, powerful network-wide ads & trackers blocking DNS server. |
-| [ASCII Movie <img src='https://raw.githubusercontent.com/gabe565/ascii-movie/a1fd5c9/assets/icon.svg' alt='ascii-movie icon' width='18px' align='right' loading='lazy'>](charts/ascii-movie/) | Star Wars movie SSH and Telnet server |
-| [Bookstack <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/bookstack/icon.svg' alt='bookstack icon' width='18px' align='right' loading='lazy'>](charts/bookstack/) | A simple, self-hosted, easy-to-use platform for organising and storing information. |
-| [Borgmatic <img src='https://raw.githubusercontent.com/borgmatic-collective/borgmatic/1.6.6/docs/static/borgmatic.svg' alt='borgmatic icon' width='18px' align='right' loading='lazy'>](charts/borgmatic/) | borgmatic is simple, configuration-driven backup software for servers and workstations. Protect your files with client-side encryption. Backup your databases too. Monitor it all with integrated third-party services. |
-| [CastSponsorSkip <img src='https://raw.githubusercontent.com/gabe565/CastSponsorSkip/0c8c4d4f/assets/icon.svg' alt='castsponsorskip icon' width='18px' align='right' loading='lazy'>](charts/castsponsorskip/) | Skip sponsored YouTube content on all local Google Cast devices. |
-| [ChangeDetection.io <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/changedetection-io/icon.png' alt='changedetection-io icon' width='18px' align='right' loading='lazy'>](charts/changedetection-io/) | Live your data-life pro-actively, track website content changes and receive notifications via Discord, Email, Slack, Telegram and 70+ more. |
-| [Domain Watch <img src='https://raw.githubusercontent.com/gabe565/domain-watch/4bae98d/assets/icon.svg' alt='domain-watch icon' width='18px' align='right' loading='lazy'>](charts/domain-watch/) | Tool to watch whois reports and notify when statuses change or expiration is incoming. |
-| [ESPHome <img src='https://raw.githubusercontent.com/esphome/esphome-docs/0191785/images/logo.svg' alt='esphome icon' width='18px' align='right' loading='lazy'>](charts/esphome/) | ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems. |
-| [Flame <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/flame/icon.svg' alt='flame icon' width='18px' align='right' loading='lazy'>](charts/flame/) | Flame is self-hosted startpage for your server. Easily manage your apps and bookmarks with built-in editors. |
-| [Generic Device Plugin ](charts/generic-device-plugin/) | The generic-device-plugin enables allocating generic Linux devices, such as serial devices, the FUSE device, or video cameras, to Kubernetes Pods |
-| [Gotify <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/gotify/icon.svg' alt='gotify icon' width='18px' align='right' loading='lazy'>](charts/gotify/) | A simple server for sending and receiving messages in real-time per WebSocket. (Includes a sleek web-ui) |
-| [Hammond <img src='https://raw.githubusercontent.com/AlfHou/hammond/84cba2c/ui/public/touch-icon.png' alt='hammond icon' width='18px' align='right' loading='lazy'>](charts/hammond/) | A self-hosted vehicle expense tracking system with support for multiple users. |
-| [Headscale <img src='https://raw.githubusercontent.com/juanfont/headscale/56a7b1e/docs/logo/headscale3-dots.svg' alt='headscale icon' width='18px' align='right' loading='lazy'>](charts/headscale/) | An open source, self-hosted implementation of the Tailscale control server. |
-| [Healthchecks <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/healthchecks/icon.svg' alt='healthchecks icon' width='18px' align='right' loading='lazy'>](charts/healthchecks/) | A cron monitoring tool written in Python & Django |
-| [Home Assistant <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/home-assistant/icon.svg' alt='home-assistant icon' width='18px' align='right' loading='lazy'>](charts/home-assistant/) | Open source home automation that puts local control and privacy first. |
-| [Homer <img src='https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets/icons/logo.svg' alt='homer icon' width='18px' align='right' loading='lazy'>](charts/homer/) | A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file. |
-| [KeyDB <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/keydb/icon.svg' alt='keydb icon' width='18px' align='right' loading='lazy'>](charts/keydb/) | A Multithreaded Fork of Redis |
-| [Limo ](charts/limo/) | A file upload server. |
-| [Matrimony <img src='https://raw.githubusercontent.com/gabe565/matrimony/b13163b/frontend/public/img/logo.svg' alt='matrimony icon' width='18px' align='right' loading='lazy'>](charts/matrimony/) | Self-hosted wedding site configured via YAML |
-| [Memos <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/memos/icon.png' alt='memos icon' width='18px' align='right' loading='lazy'>](charts/memos/) | A lightweight, self-hosted memo hub. Open Source and Free forever. |
-| [Miniflux <img src='https://raw.githubusercontent.com/miniflux/logo/40cb83c/icon.svg' alt='miniflux icon' width='18px' align='right' loading='lazy'>](charts/miniflux/) | Miniflux is a minimalist and opinionated feed reader. |
-| [Mnemonic Ninja <img src='https://raw.githubusercontent.com/gabe565/mnemonic-ninja/465602c/src/assets/logo.svg' alt='mnemonic-ninja icon' width='12px' align='right' loading='lazy'>](charts/mnemonic-ninja/) | Mnemonic Ninja is a website to convert between a number and its corresponding word to aid in memorization. |
-| [Monica <img src='https://raw.githubusercontent.com/monicahq/monica/aa98c09/public/img/favicon.svg' alt='monica icon' width='18px' align='right' loading='lazy'>](charts/monica/) | Personal CRM. Remember everything about your friends, family and business relationships. |
-| [Nightscout <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/nightscout/icon.svg' alt='nightscout icon' width='18px' align='right' loading='lazy'>](charts/nightscout/) | Web-based CGM (Continuous Glucose Monitor) to allow multiple caregivers to remotely view a patient's glucose data in real time. |
-| [Obico <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/obico/icon.svg' alt='obico icon' width='18px' align='right' loading='lazy'>](charts/obico/) | Obico is a community-built, open-source smart 3D printing platform used by makers, enthusiasts, and tinkerers around the world. |
-| [Paperless-ngx <img src='https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/b948750/src-ui/src/assets/logo-notext.svg' alt='paperless-ngx icon' width='18px' align='right' loading='lazy'>](charts/paperless-ngx/) | A community-supported supercharged version of paperless: scan, index and archive all your physical documents |
-| [PictShare <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/pictshare/icon.svg' alt='pictshare icon' width='18px' align='right' loading='lazy'>](charts/pictshare/) | PictShare is an open source image, mp4, pastebin hosting service with a simple resizing and upload API that you can host yourself. |
-| [Plex <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/plex/icon.svg' alt='plex icon' width='18px' align='right' loading='lazy'>](charts/plex/) | Plex organizes all of your personal media so you can enjoy it no matter where you are. |
-| [Podgrab ](charts/podgrab/) | A self-hosted podcast manager to download episodes as soon as they become live. |
-| [qBittorrent <img src='https://raw.githubusercontent.com/qbittorrent/qBittorrent/master/src/icons/qbittorrent-tray.svg' alt='qbittorrent icon' width='18px' align='right' loading='lazy'>](charts/qbittorrent/) | The qBittorrent project aims to provide an open-source software alternative to µTorrent. |
-| [Relax Sounds <img src='https://github.com/gabe565/relax-sounds/raw/3e55b07/frontend/src/assets/icon-purple.svg' alt='relax-sounds icon' width='18px' align='right' loading='lazy'>](charts/relax-sounds/) | Relax Sounds is a website that lets you stream relaxing sounds to your browser or over Google Cast. |
-| [RSS-Bridge <img src='https://raw.githubusercontent.com/RSS-Bridge/rss-bridge/987f42d/static/favicon.png' alt='rss-bridge icon' width='18px' align='right' loading='lazy'>](charts/rss-bridge/) | The RSS feed for websites missing it. |
-| [RSSHub <img src='https://raw.githubusercontent.com/DIYgod/RSSHub/377dd9f/website/static/img/logo.png' alt='rsshub icon' width='18px' align='right' loading='lazy'>](charts/rsshub/) | RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything. |
-| [Scanservjs <img src='https://raw.githubusercontent.com/gabe565/charts/main/charts/scanservjs/icon.svg' alt='scanservjs icon' width='18px' align='right' loading='lazy'>](charts/scanservjs/) | scanservjs is a web UI frontend for your scanner. It allows you to share one or more scanners (using SANE) on a network without the need for drivers or complicated installation. |
-| [Smarter Device Manager <img src='https://gitlab.com/uploads/-/system/group/avatar/6339043/ARM1636_Project_Logo_ST2_RGB_V1.png' alt='smarter-device-manager icon' width='18px' align='right' loading='lazy'>](charts/smarter-device-manager/) | Manage hardware resource allocation without a need for privileged containers. |
-| [Tandoor <img src='https://raw.githubusercontent.com/vabene1111/recipes/master/docs/logo_color.svg' alt='tandoor icon' width='18px' align='right' loading='lazy'>](charts/tandoor/) | Application for managing recipes, planning meals, building shopping lists and much much more! |
-| [Transsmute <img src='https://raw.githubusercontent.com/gabe565/transsmute/ce624f8/assets/icon.svg' alt='transsmute icon' width='18px' align='right' loading='lazy'>](charts/transsmute/) | Transsmute builds RSS feeds for websites that don't provide them. |
-| [Vaultwarden <img src='https://raw.githubusercontent.com/dani-garcia/vaultwarden/d57b699/resources/vaultwarden-icon.svg' alt='vaultwarden icon' width='18px' align='right' loading='lazy'>](charts/vaultwarden/) | Unofficial Bitwarden compatible server written in Rust. |
+| [AcademyFive <img src='https://raw.githubusercontent.com/voit/helm-charts/main/charts/academyfive/icon.svg' alt='academyfive icon' width='18px' align='right' loading='lazy'>](charts/academyfive/) | A modern learning management system (LMS) used by universities and institutions for online teaching and digital course management. |
+| [BigBlueButton <img src='https://raw.githubusercontent.com/voit/helm-charts/main/charts/bigbluebutton/icon.svg' alt='bigbluebutton icon' width='18px' align='right' loading='lazy'>](charts/bigbluebutton/) | Open-source virtual classroom software for online learning with video, audio, slides, chat, and screen sharing. |
+| [Bookstack <img src='https://raw.githubusercontent.com/voit/helm-charts/main/charts/bookstack/icon.svg' alt='bookstack icon' width='18px' align='right' loading='lazy'>](charts/bookstack/) | A simple, self-hosted wiki platform for organizing and storing documentation. |
+| [Element <img src='https://raw.githubusercontent.com/vector-im/element-web/develop/res/themes/element/img/logos/element-logo.svg' alt='element icon' width='18px' align='right' loading='lazy'>](charts/element/) | A secure collaboration and messaging app built on the Matrix protocol. |
+| [Homer <img src='https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets/icons/logo.svg' alt='homer icon' width='18px' align='right' loading='lazy'>](charts/homer/) | A simple and elegant start page for your self-hosted services. |
+| [ILIAS <img src='https://raw.githubusercontent.com/voit/helm-charts/main/charts/ilias/icon.svg' alt='ilias icon' width='18px' align='right' loading='lazy'>](charts/ilias/) | Powerful open-source Learning Management System (LMS) for education and training. |
+| [Jitsi <img src='https://raw.githubusercontent.com/jitsi/jitsi-meet/master/resources/images/favicon.ico' alt='jitsi icon' width='18px' align='right' loading='lazy'>](charts/jitsi/) | Secure and scalable open-source video conferencing solution. |
+| [Matrix <img src='https://raw.githubusercontent.com/matrix-org/matrix-doc/master/data/logo.svg' alt='matrix icon' width='18px' align='right' loading='lazy'>](charts/matrix/) | An open standard for secure, decentralized real-time communication. |
+| [Minecraft <img src='https://raw.githubusercontent.com/itzg/docker-minecraft-server/master/logo.png' alt='minecraft icon' width='18px' align='right' loading='lazy'>](charts/minecraft/) | A Helm chart for deploying Minecraft servers (supports mods, plugins, and custom configs). |
+| [Nextcloud <img src='https://raw.githubusercontent.com/nextcloud/server/master/core/img/logo/logo.svg' alt='nextcloud icon' width='18px' align='right' loading='lazy'>](charts/nextcloud/) | A self-hosted productivity platform for file syncing, collaboration, and communication. |
+| [OpenProject <img src='https://raw.githubusercontent.com/opf/openproject/dev/frontend/src/images/openproject-icon.svg' alt='openproject icon' width='18px' align='right' loading='lazy'>](charts/openproject/) | Web-based project management system for collaboration and tracking. |
+| [Open-Xchange <img src='https://raw.githubusercontent.com/voit/helm-charts/main/charts/open-xchange/icon.svg' alt='open-xchange icon' width='18px' align='right' loading='lazy'>](charts/open-xchange/) | Integrated email, calendar, and collaboration suite for enterprises. |
+
+---
+
+## 🚀 Usage
+
+Add the Helm repository:
+
+```bash
+helm repo add voit https://kdl-vit.github.io/helm-charts/
+helm repo update
