@@ -12,8 +12,8 @@ Each chart follows best practices and can be easily integrated into Kubernetes o
 
 ## 🗂️ Chart Overview
 
-| Chart | Description |
-| ----- | ----------- |
+| Chart  | Description |
+| ------ | ----------- |
 | [AcademyFive <img src='https://www.academyfive.com/_assets/d70ee240a0126e7c0f6007388fc0b0df/build/assets/images/logo_academyfive_white.png' alt='academyfive icon' width='18px' align='right' loading='lazy'>](charts/academyfive/) | A modern learning management system (LMS) used by universities and institutions for online teaching and digital course management. |
 | [BigBlueButton <img src='https://avatars.githubusercontent.com/u/230228?s=48&v=4' alt='bigbluebutton icon' height='18px' align='right' loading='lazy'>](charts/bigbluebutton/) | Open-source virtual classroom software for online learning with video, audio, slides, chat, and screen sharing. |
 | [Bookstack <img src='https://avatars.githubusercontent.com/u/20912696?s=48&v=4' alt='bookstack icon' width='18px' align='right' loading='lazy'>](charts/bookstack/) | A simple, self-hosted wiki platform for organizing and storing documentation. |
