@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "ilias.fullname" . }}-config
+data:
+  # example
+  ilias.conf: |
+    ini_setting1 = value1
+    ini_setting2 = value2

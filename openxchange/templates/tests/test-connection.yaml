@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "openxchange.fullname" . }}-test-connection"
+  labels:
+    {{- include "openxchange.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "openxchange.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

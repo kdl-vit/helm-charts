@@ -1,0 +1,73 @@
+replicaCount: 1
+
+image:
+  repository: srsolutions/ilias
+  tag: latest
+  pullPolicy: IfNotPresent
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: ilias.cloudnet.vit.intern
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - hosts:
+        - ilias.cloudnet.vit.intern
+      secretName: ilias-tls
+
+service:
+  type: ClusterIP
+  port: 443
+
+database:
+  enabled: true
+  type: mariadb       # or mysql
+  host: ""
+  port: 3306
+  name: ilias
+  user: ilias
+  password: iliaspassword   # you’ll replace via secret or external DB
+
+persistence:
+  enabled: true
+  storageClass: ""
+  accessMode: ReadWriteOnce
+  size: 10Gi
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 1Gi
+  requests:
+    cpu: 250m
+    memory: 512Mi
+
+env:
+  ILIAS_AUTO_SETUP: "0"
+  ILIAS_DB_HOST: ""
+  ILIAS_DB_PORT: "3306"
+  ILIAS_DB_NAME: ""
+  ILIAS_DB_USER: ""
+  ILIAS_DB_PASSWORD: ""
+  # more env vars can go here
+
+# Optionally you might want metrics, liveness/readiness probes:
+probes:
+  liveness:
+    enabled: true
+    path: /   # adjust according to ILIAS health check endpoint
+    port: 80
+    initialDelaySeconds: 60
+    periodSeconds: 30
+  readiness:
+    enabled: true
+    path: /
+    port: 80
+    initialDelaySeconds: 30
+    periodSeconds: 15
+
+extraVolumes: []
+extraVolumeMounts: []

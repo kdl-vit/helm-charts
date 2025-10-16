@@ -1,0 +1,6 @@
+apiVersion: v2
+name: ilias
+description: A Helm chart for the ILIAS learning platform to run on an Kubernetes cluster.
+type: application
+version: 0.1.0
+appVersion: "10.2"
